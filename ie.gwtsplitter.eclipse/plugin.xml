@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="ie.gwtsplitter.eclipse.actionSet"
+            label="Analyze Code"
+            visible="true">
+         <action
+               class="ie.gwtsplitter.eclipse.actionSet.AnalyzeCodeAction"
+               id="ie.gwtsplitter.eclipse.actionSet"
+               label="Analyse Code"
+               style="push"
+               toolbarPath="/analyzecode">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="ie.gwtsplitter.eclipse.viewpart.GWTCodeCharts"
+            id="ie.gwtsplitter.eclipse.view.codecharts"
+            name="Code Charts"
+            restorable="true">
+      </view>
+      <view
+            class="ie.gwtsplitter.eclipse.viewpart.GWTLogReader"
+            id="ie.gwtsplitter.eclipse.view.logreader"
+            name="GWT Log Reader"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.viewActions">
+      <viewContribution
+            id="ie.gwtsplitter.eclipse.view.logreader.ToolbarAction"
+            targetID="ie.gwtsplitter.eclipse.view.logreader">
+         <action
+               class="ie.gwtsplitter.eclipse.logreader.StopViewActionDelegate"
+               id="ie.gwtsplitter.eclipse.view.logreader.Stop"
+               label="Stop"
+               style="push"
+               toolbarPath="additions"
+               tooltip="Stop Polling">
+         </action>
+         <action
+               class="ie.gwtsplitter.eclipse.logreader.StartViewActionDelegate"
+               id="ie.gwtsplitter.eclipse.view.logreader.Start"
+               label="Start"
+               style="push"
+               toolbarPath="additions"
+               tooltip="Start Polling">
+         </action>
+      </viewContribution>
+   </extension>
+
+</plugin>

@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CodeInspect
+Bundle-SymbolicName: CodeInspect
+Bundle-Version: 1.0.0
+Bundle-ClassPath: CodeInspect.jar,
+ lib/gwt-dev-mac.jar,
+ lib/gwt-user.jar
+Export-Package: ie.gwtsplitter.codeinspect,
+ ie.gwtsplitter.codeinspect.domain,
+ ie.gwtsplitter.codeinspect.visitor,
+ ie.gwtsplitter.reader
+Import-Package: ie.gwtsplitter.codeinspect.domain

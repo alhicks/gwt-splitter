@@ -1,0 +1,29 @@
+<project>
+
+	<!-- gwt jars -->
+	<property name="gwt.location" 		location="/Users/alanh/local/eclipse-versions/current/plugins/com.google.gwt.eclipse.sdkbundle.2.0.0_2.0.0.v200912062003/gwt-2.0.0"/>
+	<property name="gwt-user.jar" 		location="${gwt.location}/gwt-user.jar" />
+	<property name="gwt-servlet.jar"	location="${gwt.location}/gwt-servlet.jar" />
+	<property name="gwt-dev.jar" 		location="${gwt.location}/gwt-dev-${build.host.platform}.jar" />
+	
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+	
+    <target name="compile" depends="clean">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes">
+			<classpath location="${gwt-user.jar}" />
+			<classpath location="${gwt-dev.jar}" />
+			<classpath location="${gwt-servlet.jar}" />
+    	</javac>
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="build/jar"/>
+        <jar destfile="build/jar/gwttrack-module.jar" basedir="build/classes">
+        	<fileset dir="src"/>
+        </jar>
+    </target>
+
+</project>
