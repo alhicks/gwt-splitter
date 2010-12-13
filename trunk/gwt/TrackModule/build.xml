@@ -1,4 +1,4 @@
-<project>
+<project name="gwtsplitter-trackmodule" basedir="." default="jar">
 
 	<!-- gwt jars -->
 	<property name="gwt.location" 		location="/Users/alanh/local/eclipse-versions/current/plugins/com.google.gwt.eclipse.sdkbundle.2.0.0_2.0.0.v200912062003/gwt-2.0.0"/>
