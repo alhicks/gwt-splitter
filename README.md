@@ -1,4 +1,4 @@
-### Project Structure Directory:
+### Project Structure Directory
 /CodeInspect 					- parser,analyser and splitter
 
 /gwt
@@ -8,6 +8,7 @@
 /jfreechartjars					- required for plugin
 
 
+### Overview
 This research focuses on applying automated techniques for code splitting in Google Web Toolkit (GWT) 1? applications. Code splitting is one of the advanced features in the 2.0 release of GWT and aims to speed up the compiled application by separating the code into individual download segments. Segments are downloaded only when required by the end user. Code splitting is a useful feature because as applications get more complex and have a bigger footprint, it is necessary to find ways to speed up the response time for the user.
 
 GWT allows developers to build JavaScript? applications using the Java language. The toolkit converts Java code into JavaScript?. GWT abstracts from the low-level browser quirks of JavaScript? development. The comprehensive set of features provided by GWT represents a viable alternative to JavaScript? programming. Over the last several years GWT has become increasingly popular. The resulting tools, which have been developed by the GWT community, are proof of this popularity. One example of such a tool is the GWT Eclipse Plugin which enables simple compilation and deployment of GWT-based applications within the Eclipse environment.
